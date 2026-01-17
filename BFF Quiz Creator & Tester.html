@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/Friends/OneDrive/Desktop/qizesss%20.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFF Quiz Creator &amp; Tester</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f8ff; color: #333; text-align: center; padding: 20px; }
+        h1 { color: #ff69b4; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        button { background-color: #ff69b4; color: white; border: none; padding: 10px 20px; margin: 10px; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #ff1493; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        .question { margin-bottom: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>🫂 BFF Quiz Creator &amp; Tester 🫂</h1>
+    <p>Test your bestie with custom questions! Create a quiz, then take it to see how well they know you.</p>
+    
+    <div class="container">
+        <button id="createBtn">Create Quiz</button>
+        <button id="takeBtn">Take Quiz</button>
+        
+        <div id="createSection" class="hidden">
+            <h2>Create Your Quiz</h2>
+            <input type="text" id="questionInput" placeholder="Enter a question (e.g., What&#39;s my favorite movie?)">
+            <input type="text" id="option1" placeholder="Option 1">
+            <input type="text" id="option2" placeholder="Option 2">
+            <input type="text" id="option3" placeholder="Option 3">
+            <input type="text" id="option4" placeholder="Option 4">
+            <select id="correctAnswer">
+                <option value="">Select correct answer</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+            </select>
+            <button id="addQuestionBtn">Add Question</button>
+            <div id="questionList"><div class="question"><strong>Q1:</strong> What instantly lifts my mood?<br>Options: Music, Food, A deep conversation, Silence &amp; peace<br>Correct: Food</div><div class="question"><strong>Q2:</strong> What food could you eat every day without getting bored?<br>Options: matar panner, momos, pav baji, choole bature <br>Correct: pav baji</div><div class="question"><strong>Q3:</strong> my fav drama <br>Options: Extraordinary you, King the land , Alomost famous , Vincenzo<br>Correct: Vincenzo</div><div class="question"><strong>Q4:</strong> which app i used more <br>Options: Instagram , Youtube, ChatGPt, C.ai<br>Correct: ChatGPt</div><div class="question"><strong>Q5:</strong> which game would i rather play <br>Options: Video game, Outdoor game , None, Both<br>Correct: Outdoor game </div><div class="question"><strong>Q6:</strong> What is my  favorite vacation destination?<br>Options: Beach, Fortest, City , Mountain<br>Correct: Mountain</div><div class="question"><strong>Q7:</strong> Do i like someone ?<br>Options: Ofcourse , Yess, No, Never<br>Correct: No</div><div class="question"><strong>Q8:</strong>  What do i most enjoy doing in your spare time?<br>Options: Drawing , Sleeping , Playing, Cooking<br>Correct: Playing</div><div class="question"><strong>Q9:</strong> Which drink do you like the most?<br>Options: Coffee , Cold drink , Chai, Juice<br>Correct: Coffee </div><div class="question"><strong>Q10:</strong> When I’m not okay, how do I act differently?<br>Options: Talk to much , Crying , Slient , Act more normally <br>Correct: Slient </div></div>
+        </div>
+        
+        <div id="takeSection" class="">
+            <h2>Take the Quiz</h2>
+            <div id="quizQuestions"><div class="question"><p><strong>Q1:</strong> What instantly lifts my mood?</p><input type="radio" name="q0" value="1"> Music<br><input type="radio" name="q0" value="2"> Food<br><input type="radio" name="q0" value="3"> A deep conversation<br><input type="radio" name="q0" value="4"> Silence &amp; peace<br></div><div class="question"><p><strong>Q2:</strong> What food could you eat every day without getting bored?</p><input type="radio" name="q1" value="1"> matar panner<br><input type="radio" name="q1" value="2"> momos<br><input type="radio" name="q1" value="3"> pav baji<br><input type="radio" name="q1" value="4"> choole bature <br></div><div class="question"><p><strong>Q3:</strong> my fav drama </p><input type="radio" name="q2" value="1"> Extraordinary you<br><input type="radio" name="q2" value="2"> King the land <br><input type="radio" name="q2" value="3"> Alomost famous <br><input type="radio" name="q2" value="4"> Vincenzo<br></div><div class="question"><p><strong>Q4:</strong> which app i used more </p><input type="radio" name="q3" value="1"> Instagram <br><input type="radio" name="q3" value="2"> Youtube<br><input type="radio" name="q3" value="3"> ChatGPt<br><input type="radio" name="q3" value="4"> C.ai<br></div><div class="question"><p><strong>Q5:</strong> which game would i rather play </p><input type="radio" name="q4" value="1"> Video game<br><input type="radio" name="q4" value="2"> Outdoor game <br><input type="radio" name="q4" value="3"> None<br><input type="radio" name="q4" value="4"> Both<br></div><div class="question"><p><strong>Q6:</strong> What is my  favorite vacation destination?</p><input type="radio" name="q5" value="1"> Beach<br><input type="radio" name="q5" value="2"> Fortest<br><input type="radio" name="q5" value="3"> City <br><input type="radio" name="q5" value="4"> Mountain<br></div><div class="question"><p><strong>Q7:</strong> Do i like someone ?</p><input type="radio" name="q6" value="1"> Ofcourse <br><input type="radio" name="q6" value="2"> Yess<br><input type="radio" name="q6" value="3"> No<br><input type="radio" name="q6" value="4"> Never<br></div><div class="question"><p><strong>Q8:</strong>  What do i most enjoy doing in your spare time?</p><input type="radio" name="q7" value="1"> Drawing <br><input type="radio" name="q7" value="2"> Sleeping <br><input type="radio" name="q7" value="3"> Playing<br><input type="radio" name="q7" value="4"> Cooking<br></div><div class="question"><p><strong>Q9:</strong> Which drink do you like the most?</p><input type="radio" name="q8" value="1"> Coffee <br><input type="radio" name="q8" value="2"> Cold drink <br><input type="radio" name="q8" value="3"> Chai<br><input type="radio" name="q8" value="4"> Juice<br></div><div class="question"><p><strong>Q10:</strong> When I’m not okay, how do I act differently?</p><input type="radio" name="q9" value="1"> Talk to much <br><input type="radio" name="q9" value="2"> Crying <br><input type="radio" name="q9" value="3"> Slient <br><input type="radio" name="q9" value="4"> Act more normally <br></div></div>
+            <button id="submitQuizBtn">Submit Quiz</button>
+            <div id="results" class="">
+                <h3>Your Score: <span id="score">1/10</span></h3>
+                <p id="feedback">Oops, time for a BFF catch-up! 😂</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let questions = [];
+        
+        document.getElementById('createBtn').addEventListener('click', () => {
+            document.getElementById('createSection').classList.remove('hidden');
+            document.getElementById('takeSection').classList.add('hidden');
+        });
+        
+        document.getElementById('takeBtn').addEventListener('click', () => {
+            document.getElementById('takeSection').classList.remove('hidden');
+            document.getElementById('createSection').classList.add('hidden');
+            loadQuiz();
+        });
+        
+        document.getElementById('addQuestionBtn').addEventListener('click', () => {
+            const q = document.getElementById('questionInput').value;
+            const o1 = document.getElementById('option1').value;
+            const o2 = document.getElementById('option2').value;
+            const o3 = document.getElementById('option3').value;
+            const o4 = document.getElementById('option4').value;
+            const correct = document.getElementById('correctAnswer').value;
+            
+            if (q && o1 && o2 && o3 && o4 && correct) {
+                questions.push({ question: q, options: [o1, o2, o3, o4], correct: parseInt(correct) });
+                updateQuestionList();
+                // Clear inputs
+                document.getElementById('questionInput').value = '';
+                document.getElementById('option1').value = '';
+                document.getElementById('option2').value = '';
+                document.getElementById('option3').value = '';
+                document.getElementById('option4').value = '';
+                document.getElementById('correctAnswer').value = '';
+            } else {
+                alert('Please fill in all fields!');
+            }
+        });
+        
+        function updateQuestionList() {
+            const list = document.getElementById('questionList');
+            list.innerHTML = '';
+            questions.forEach((q, i) => {
+                const div = document.createElement('div');
+                div.className = 'question';
+                div.innerHTML = `<strong>Q${i+1}:</strong> ${q.question}<br>Options: ${q.options.join(', ')}<br>Correct: ${q.options[q.correct-1]}`;
+                list.appendChild(div);
+            });
+        }
+        
+        function loadQuiz() {
+            const quizDiv = document.getElementById('quizQuestions');
+            quizDiv.innerHTML = '';
+            questions.forEach((q, i) => {
+                const div = document.createElement('div');
+                div.className = 'question';
+                div.innerHTML = `<p><strong>Q${i+1}:</strong> ${q.question}</p>`;
+                q.options.forEach((opt, j) => {
+                    div.innerHTML += `<input type="radio" name="q${i}" value="${j+1}"> ${opt}<br>`;
+                });
+                quizDiv.appendChild(div);
+            });
+        }
+        
+        document.getElementById('submitQuizBtn').addEventListener('click', () => {
+            let score = 0;
+            questions.forEach((q, i) => {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && parseInt(selected.value) === q.correct) {
+                    score++;
+                }
+            });
+            document.getElementById('score').textContent = `${score}/${questions.length}`;
+            const feedback = score === questions.length ? "Perfect! You're a true BFF! 💖" : score > questions.length / 2 ? "Not bad, but study up! 😊" : "Oops, time for a BFF catch-up! 😂";
+            document.getElementById('feedback').textContent = feedback;
+            document.getElementById('results').classList.remove('hidden');
+        });
+    </script>
+
+</body></html>
